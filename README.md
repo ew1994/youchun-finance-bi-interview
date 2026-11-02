@@ -21,6 +21,12 @@ npx serve .
 
 或任意静态文件服务器托管本目录。
 
+## 公网演示
+
+```text
+https://youchun-finance-bi-interview.pages.dev/
+```
+
 ## Cloudflare Pages
 
 - Framework preset：`None`
