@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>悠纯牧业｜财务经营分析 BI 面试作品</title>
+  <link rel="stylesheet" href="styles.css?v=metric-logic">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <img src="assets/youchun-logo.png" alt="UCUN 悠纯" class="brand-logo">
+        <div class="brand-product">财务经营分析 BI<span>FINANCE BP WORKBENCH</span></div>
+      </div>
+      <div class="mock-badge"><i></i> 面试展示作品 · 公开信息＋Mock</div>
+      <nav id="mainNav" aria-label="作品与分析页面">
+        <p class="nav-section">作品说明</p>
+        <button class="nav-item active" data-page="intro"><span>00</span>作品总览</button>
+        <button class="nav-item" data-page="assumptions"><span>01</span>假设与数据</button>
+        <p class="nav-section">经营分析</p>
+        <button class="nav-item" data-page="overview"><span>02</span>经营总览</button>
+        <button class="nav-item" data-page="sku"><span>03</span>销售与单品盈利</button>
+        <button class="nav-item" data-page="inventory"><span>04</span>生产成本与库存</button>
+        <button class="nav-item" data-page="expense"><span>05</span>费用与预算管控</button>
+        <button class="nav-item" data-page="cash"><span>06</span>活动现金与营运资金</button>
+        <p class="nav-section">交付与技术</p>
+        <button class="nav-item" data-page="report"><span>07</span>专项报告与行动项</button>
+        <button class="nav-item" data-page="tech"><span>08</span>技术架构与代码</button>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="quality-row"><span>数据质量</span><strong>19 / 19</strong></div>
+        <div class="quality-track"><i></i></div>
+        <p>独立校验全部通过</p>
+        <div class="version">MOCK-2026.09<br>公开经营信息＋可验证模拟</div>
+      </div>
+    </aside>
+
+    <main class="main-area">
+      <header class="topbar">
+        <div class="page-heading">
+          <p id="pageEyebrow" class="eyebrow">PROJECT OVERVIEW</p>
+          <h1 id="pageTitle">作品总览</h1>
+          <p id="pageSubtitle">先说明为什么做、依据什么做，再进入经营分析和技术验证</p>
+        </div>
+        <div class="top-actions">
+          <label class="period-picker">分析期间
+            <select id="periodSelect" aria-label="分析期间"><option value="2026-09">2026 年 9 月</option></select>
+          </label>
+          <button class="btn secondary active" id="guideToggle" aria-pressed="true">讲解提示</button>
+          <button class="btn secondary" id="printBtn">打印 / PDF</button>
+          <button class="btn primary" id="reportBtn">专项报告</button>
+        </div>
+      </header>
+      <section class="context-strip">
+        <div><span class="status-dot"></span><span id="phaseName">作品说明</span><span class="divider">/</span><span id="stepName">01 · 作品总览</span></div>
+        <div>金额单位：人民币万元 <span class="divider">|</span> 全部经营数值为 Mock</div>
+      </section>
+      <div class="workspace">
+        <section id="content" class="content"></section>
+        <aside id="coachPanel" class="coach-panel" aria-label="本页讲解提示">
+          <div class="coach-head"><span>本页讲解</span><button id="coachClose" aria-label="关闭讲解提示">×</button></div>
+          <div id="coachContent"></div>
+          <button class="coach-next" id="coachNext">下一步：假设与数据 →</button>
+        </aside>
+      </div>
+      <footer class="step-footer">
+        <button id="prevPage" class="step-button" disabled>← 上一步</button>
+        <div class="step-progress"><i id="stepProgress"></i></div>
+        <span id="pageCounter">01 / 09</span>
+        <button id="nextPage" class="step-button">下一步：假设与数据 →</button>
+      </footer>
+    </main>
+  </div>
+  <dialog id="metricDialog" class="metric-dialog" aria-labelledby="metricDialogTitle">
+    <div class="metric-dialog-head">
+      <div><p class="eyebrow">CALCULATION LOGIC</p><h2 id="metricDialogTitle">指标计算逻辑</h2></div>
+      <button id="metricDialogClose" class="metric-dialog-close" aria-label="关闭计算逻辑">×</button>
+    </div>
+    <div id="metricDialogBody" class="metric-dialog-body"></div>
+  </dialog>
+  <div id="toast" class="toast" role="status"></div>
+  <script src="data.js"></script>
+  <script src="metric-logic.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
