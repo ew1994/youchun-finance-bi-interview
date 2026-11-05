@@ -29,7 +29,7 @@ const pageOrder = [
   { id: "tech", phase: "交付与技术", step: "08 · 技术架构与代码", eyebrow: "VERIFIABLE TECHNOLOGY" },
 ];
 const guideContent = {
-  intro: { title: "先看公司级全局图", script: "先讲岗位需要月度经营、费用、毛利和现金分析，再讲悠纯公开业务结构。本作品统一为一个情景：公司用抖音推广低温酸奶，销量增长，但推广、冷链、短保报损和资金占用共同侵蚀经营质量。", tips: ["01 是岗位任务，02 是公开企业与范围，03 是分析主线，04 是具体技术路线。", "50% 时效提升需要企业实测。"] },
+  intro: { title: "先看公司级全局图", script: "先讲项目需要覆盖月度经营、费用、毛利和现金分析，再看悠纯公开业务结构。本作品统一为一个情景：公司用抖音推广低温酸奶，销量增长，但推广、冷链、短保报损和资金占用共同侵蚀经营质量。", tips: ["01 是项目目标，02 是公开企业与范围，03 是分析主线，04 是具体技术路线。", "50% 时效提升需要企业同范围实测。"] },
   assumptions: { title: "先情景，再数据证据", script: "本页先看供产销存＋费用＋活动现金模型和 18 份 Excel 的分类。沿边际贡献、费用、库存和现金验证为什么增收不增利，以及继续加投与备货是否可持续。", tips: ["A 类公开事实、B 类业务规则、C 类模拟数值要分清。", "公司现金与 CCC 不等于活动净现金流，抖音应收和低温库存单独下钻。"] },
   overview: { title: "先看增收不增利", script: "收入增长 6.95%，但渠道边际贡献率下降 4.47 个百分点。不要只看总销售额，要继续下钻抖音直接费用、低温备货和临期报损，验证增长策略是否真正创造利润。", tips: ["管理经营利润为负，说明渠道边际贡献不足覆盖公共费用。", "点击异常可进入对应专题页。"] },
   sku: { title: "用抖音讲透毛利与贡献", script: "抖音平均净售价 14.08 元/KG，同比 -0.93%；商品毛利率 26.95%，渠道边际贡献率却为 -11.30%。净价只是辅助因素，主要继续检查直接推广、达人、履约和渠道费用。", tips: ["净售价不与原奶采购价直接比较。", "SKU 主分析止于渠道边际贡献，不强算净利润。"] },
@@ -374,9 +374,9 @@ function renderReport() {
 }
 
 function renderIntro() {
-  return `<section class="hero"><p class="eyebrow">COMPANY-LEVEL FINANCE BP · INTERVIEW PROJECT</p><h2>悠纯公司级<em>供产销存＋费用＋活动现金</em><br>经营分析 BI</h2><p>这是一个面试展示作品。企业业务结构来自公开经营信息，经营数值为 Mock。作品围绕“抖音推广低温酸奶”这一增长情景，把采购、生产、库存、销售、费用和活动资金放在同一个公司级经营分析模型中。</p><div class="hero-meta"><span>公开企业信息</span><span>供产销存分析</span><span>费用与预算管控</span><span>低温库存与报损</span><span>活动现金与安全垫</span><span>标准化 BI＋专项报告</span></div></section>
-  <div class="section-intro"><h2>01 / 需求背景：这个岗位用来做什么</h2><p>不是招一个只整理表格的数据统计员，而是让财务数据分析形成标准、及时、可复核的月度交付。</p></div>
-  <div class="callout"><b>JD 原文要求：</b>负责财务数据分析，完成月度经营分析、费用分析、毛利与现金流分析，输出标准化 BI 看板与专项分析报告，报表交付时效提升 50% 以上。本作品覆盖月度经营、毛利、费用、库存和活动现金，现金只服务于推广、备货与回款决策。</div>
+  return `<section class="hero"><p class="eyebrow">COMPANY-LEVEL FINANCE BP · INDEPENDENT RESEARCH PROJECT</p><h2>悠纯公司级<em>供产销存＋费用＋活动现金</em><br>经营分析 BI</h2><p>这是一个基于悠纯公开业务资料的独立研究型 BI 作品。企业业务结构来自公开经营信息，经营数值为 Mock。作品围绕“抖音推广低温酸奶”这一增长情景，把采购、生产、库存、销售、费用和活动资金放在同一个公司级经营分析模型中。</p><div class="hero-meta"><span>公开企业信息</span><span>供产销存分析</span><span>费用与预算管控</span><span>低温库存与报损</span><span>活动现金与安全垫</span><span>标准化 BI＋专项报告</span></div></section>
+  <div class="section-intro"><h2>01 / 项目背景：为什么做这套经营分析</h2><p>目标不是简单整理报表，而是把月度经营、毛利、费用和现金流分析做成标准、及时、可复核的经营交付。</p></div>
+  <div class="callout"><b>项目目标：</b>围绕月度经营、毛利、费用、库存和活动现金建立统一分析视图，让销售增长能够继续追溯到渠道贡献、短保库存和现金占用，并形成可执行的经营措施。</div>
   <div class="scenario-grid" style="margin-top:13px">
     <div class="scenario-card"><div class="step-no">月度经营</div><h3>本月结果和异常是什么</h3><p>统一收入、毛利、渠道边际贡献和同比/环比，先定位增收不增利的问题。</p></div>
     <div class="scenario-card"><div class="step-no">费用与毛利</div><h3>哪些渠道和 SKU 真正赚钱</h3><p>不仅看收入与商品毛利，还看直接费用后的边际贡献和预算差异。</p></div>
@@ -419,7 +419,7 @@ function renderAssumptions() {
     <tr><td><b>费用 · 直接＋公共</b></td><td>履约、平台、推广、达人及公共部门费用与预算</td><td>费用率、预算差异、渠道直接费用率</td><td>利润在哪一层被费用侵蚀</td></tr>
     <tr><td><b>资金 · 公司＋活动下钻</b></td><td>应收应付、现金流水、抖音应收、重点低温库存与周预测</td><td>经营现金、CCC、安全垫</td><td>加投与备货的现金是否可持续</td></tr>
   </tbody></table>
-  <div class="insight-line"><strong>两种顺序不冲突：</strong>模型按业务流“供→产→存→销→费用→资金”理解；左侧页面按面试诊断顺序“总览→销售→成本库存→费用→活动现金→报告→技术”讲解，先发现结果，再追查原因并形成决策闭环。</div>
+  <div class="insight-line"><strong>两种顺序不冲突：</strong>模型按业务流“供→产→存→销→费用→资金”理解；页面按经营诊断顺序“总览→销售→成本库存→费用→活动现金→报告→技术”展开，先发现结果，再追查原因并形成决策闭环。</div>
   <div class="scenario-grid" style="margin-top:13px">
     <div class="scenario-card"><div class="step-no">A / 公开事实</div><h3>业务结构</h3><p>品牌、代表产品、渠道类型和生产基地，保留公开来源。</p></div>
     <div class="scenario-card"><div class="step-no">B / 业务规则</div><h3>Mock 生成规则</h3><p>低温短保、渠道价差、OEM 账期、新厂爬坡。</p></div>
